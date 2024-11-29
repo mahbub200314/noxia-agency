@@ -1,0 +1,502 @@
+
+body{
+    position: relative;
+}
+.herosection{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/assets/img/bg/hero-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:clip;
+    
+
+}
+
+header{
+    background-color:rgb(41, 22, 117, 0.6);
+    display: flex;
+    justify-content: space-between;
+     padding:15px 10px;
+     align-items: center;
+     border-bottom:0.5px solid gray;
+
+    .contact p,span{
+        color:$white;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        margin: 0px 10px;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    
+
+    }
+}
+.contact{
+    display: flex;
+   gap: 15px;
+   
+
+}
+
+
+//nav style start.......................................................................................
+//.....................................................................................................
+nav{
+    background-color: rgb(37, 20, 118,0.6);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 5%;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+ 
+    .logo img{
+        width: 200px;
+    }
+}
+
+#nav.navbg{
+    background-color: $font-heading-black;
+    position: fixed;
+    top: 0;
+}
+
+.ul-list{
+    display: flex;
+     gap: 25px;
+     justify-self: right;
+     width: 100%;
+     justify-content: end;
+     padding-right: 7%;
+
+    
+    li{
+       list-style:none;
+       height: 100%;
+       line-height: 78px;
+       padding: 0px 10px ;
+       &:hover span{
+        rotate: -180deg;
+        transition: all 0.3s ease-out;
+      
+       }
+       
+       &:hover a{
+        color: $theme-color;
+   }
+        a{
+            color:$white;
+            text-decoration: none; 
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            
+            span{
+                transition: all 0.3s ease;
+            }
+          
+         }
+    }
+}
+
+.bar{
+    display: flex;
+     align-items: center;
+     gap:10px;
+   span{
+    cursor: pointer;
+   }
+}
+.bar-button{
+
+    background-color: $theme-color;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 50%;
+    justify-content: center;
+    padding-left:10px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    span{
+        width: 25px;
+        height: 2px;
+        color:$white;
+        background-color: $bg-white;
+        transition: all 0.3s ease-in;
+    
+    
+    }
+    .span1{
+        width: 30px;
+        
+
+    }
+    .span3{
+        width: 30px;
+        
+    }
+
+}
+
+.bar-button:hover{
+    
+    
+     .span1{
+       width: 25px;
+     }
+    .span2{
+        width: 18px;
+    }
+    
+    .span3{
+    width: 20px;
+        
+    }
+}
+
+.dropdown{
+    position: relative;
+    &:hover .dropdown-item{
+      display: block;
+      top: 80px;
+    }
+}
+.dropdown-item{
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    display: none;
+    transition: all 0.5s ease;
+    
+
+    li{
+        background-color: $bg-white;
+        min-width: 120px;
+        width: 100%;
+        display: flex;
+        padding: 0px;
+        border-bottom: 0.5px black solid;
+        width: fit-content;
+        padding: 0px 5px;
+        transition: all 0.5s ease-in-out;
+        a{
+            color: black;
+            width:100%;
+            width: fit-content;
+            font-size: 18px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
+
+ .bar-x{
+    display: none;
+ }
+.navbar-contact{
+    display: none;
+}
+.li-contact{
+    display: none;
+}
+
+
+//RESPONSIVE//////////////////////////
+
+
+@media(max-width:1118px){
+    .dropdown{
+        position: relative;
+        &:hover .dropdown-item{
+          display: none;
+          top: 80px;
+        }
+    }
+    
+      header{
+        display: none;
+      }
+      .contact-us{
+        display: none;
+      }
+    .ul-list{
+        position: absolute;
+        background:url(/assets/img/bg/sidearea-bg-img.png);
+        background-color: rgb(40, 40, 40);
+        background-position: center;
+        background-size: cover;
+        top:0px;
+        right: -100%;
+        max-width: 450px;
+        min-height: 100vh;
+        z-index: 50;
+        flex-direction: column;
+        justify-content: start;
+        padding: 0px;
+        transition: all 0.4s ease;
+         li{
+        line-height: 30px;
+        
+
+           a {
+                border-bottom: 1px solid gray;
+            }
+         }
+        
+    }
+/////js..................
+   
+
+    .ul-list.add{
+        right: 0px;
+    }
+    .ul-list.remove{
+        right: -100%;
+    }
+//////''''......................
+    .dropdown a{
+        display: flex;
+      
+        justify-content: space-between;
+        padding:0px 10px
+    }
+
+    .dropdown-item{
+        position: static;
+        align-items: center;
+        justify-content: center;
+        li{
+            width: 100%;
+        
+        }
+    }
+    .bar-x{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999;
+        position: relative;
+        border: 2px solid transparent;
+      
+            .logo{
+                margin-top: 50px;
+            }
+
+        span{
+            color:$white;
+            display: flex;
+            width: fit-content;
+            padding: 8px 12px ;
+        
+            cursor:pointer;
+            background-color: rgb(51, 49, 49);
+            &:hover{
+                background-color: $theme-color;
+            }
+
+            .charm--cross{
+                color:$white;
+                background-color: $bg-white;
+            }
+        }
+
+    }
+
+    .navbar-contact{
+        display:block;
+ 
+    }
+
+    .li-contact{
+        display: block;
+        address{
+            margin-top: 50px;
+            color:$white;
+            font-size: 20px;
+             
+         }
+        }
+   
+}
+@media(max-width:415px){
+    .bi--handbag-fill,.mynaui--search{
+        display: none;
+    }
+}
+
+
+.contact-us{
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    min-height: 200vh;
+    background: url(/assets/img/bg/sidearea-bg-img.png);
+    background-color:rgb(40, 40, 40);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 3%;
+    padding-right: 20px; 
+     max-width: 500px;
+     min-height: 100vh;
+     transition: all 0.4s ease-in-out;
+     transition-duration: 0.5s ;
+    z-index: 100000;
+    #cross2{
+        color: $bg-white;
+        background-color: rgb(62, 58, 58);
+       display: flex;
+       width: fit-content;
+       padding:8px 10px;
+       margin-left: 80%;
+       margin-top: 40px;
+       &:hover{
+        background-color:$theme-color;
+        cursor: pointer;
+
+       }
+        .charm--cross{
+            padding: 10px 15px;
+        }
+    }
+
+
+    img{
+        width: 200px;
+    }
+
+    p{
+        color:$white;
+        margin-bottom: 30px;
+    }
+    pre{
+        color:gray;
+        font-weight: 600;
+        margin-top:30px;
+        line-height: 30px;
+    }
+
+    address{
+color:$white;
+margin-top: 70px;
+    }
+    
+}
+
+////js..........................
+.contact-us.remove{
+    right: -100%;
+
+}
+.contact-us.add{
+    right: 0px;
+
+}
+
+
+////.............all button .....................................
+/// ........................................................................
+/// ...................................
+
+.button{
+    color:$white;
+    text-decoration: none;
+    background-color: $theme-color;
+    padding: 18px 35px;
+    margin-bottom: 20px;
+    display: flex;
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease-in;
+}
+.button::after{
+    content: '';
+    position: absolute;
+    width: 0.5px ;
+    height: 0.5;
+    background-color: $font-heading-black;
+    top:50% ;
+    left: 50%;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+    border-radius: 50%;
+}
+
+.button:hover::after{
+    width: 1px;
+    height: 1px;
+    transform: scale(300);
+    transition-duration: 0.3s ;
+    
+}
+
+///.........................................................
+/// .....................
+/// .......................................
+
+.slide{
+    display: flex;
+     padding-top: 70px;
+    
+    .slide1{
+   
+        padding-left: 5%;
+             h1{
+                font-size : clamp(3rem, 10vw, 5rem);
+                // color:$white;
+                color: $white;
+                font-weight: 1000;
+                margin-top: 100px;
+                font-family: $font-heading;
+             }
+             p{
+                font-size: 22px;
+                color: $white;
+                margin:30px 0px;
+                font-weight: $headiing-font-weight;
+                line-height: 36px;
+
+             }
+    }
+}
+
+@media(max-width:1157px){
+    .slide2{
+        display: none;
+
+    }
+    .slide{
+        display: flex;
+        padding-bottom: 0px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .slide1{
+        padding: 10px;
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      
+         h1{
+            margin-top: 0px;
+            width: 100%;
+    
+         }
+    }
+
+    
+}

@@ -1,0 +1,23 @@
+@import 'variable';
+@import 'icon';
+@import 'hero';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'featuresAndSkill';
+@import 'eventService';
+@import 'teamToFooter';
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Mulish", serif;
+    scroll-behavior: smooth;
+}
+html, body{
+    scroll-behavior: smooth;
+    
+}
+.bar{
+    span{
+        color:$white;
+    }
+}
