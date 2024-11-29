@@ -146,7 +146,7 @@ body {
 .herosection {
   width: 100%;
   min-height: 100vh;
-  background-image: url(/assets/img/bg/hero-bg.jpg);
+  background-image: url(../assets/img/bg/hero-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -342,7 +342,7 @@ nav .logo img {
   }
   .ul-list {
     position: absolute;
-    background: url(/assets/img/bg/sidearea-bg-img.png);
+    background: url(../assets/img/bg/sidearea-bg-img.png);
     background-color: rgb(40, 40, 40);
     background-position: center;
     background-size: cover;
@@ -430,7 +430,7 @@ nav .logo img {
   top: 0px;
   right: -100%;
   min-height: 200vh;
-  background: url(/assets/img/bg/sidearea-bg-img.png);
+  background: url(../assets/img/bg/sidearea-bg-img.png);
   background-color: rgb(40, 40, 40);
   background-size: cover;
   background-position: center;
@@ -777,7 +777,7 @@ nav .logo img {
 }
 .testimonial {
   min-height: 80vh;
-  background: url(/assets/img/bg/testimonial.jpg);
+  background: url(../assets/img/bg/testimonial.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
