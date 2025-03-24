@@ -141,6 +141,7 @@
 
 body {
   position: relative;
+  overflow-x:hidden
 }
 
 .herosection {
